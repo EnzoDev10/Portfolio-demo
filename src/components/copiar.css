@@ -1,0 +1,108 @@
+:root {
+	--header-color: #141414;
+	--primary-color: #001b32;
+	--secondary-color: #143552;
+	--focus-color: hsl(208, 61%, 30%);
+	--bs-focus-ring-color: var(--focus-color);
+
+	/*  */
+	--animation-distance: -3px;
+	--animation-duration: 4s;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+.raleway-black {
+	font-weight: 900;
+}
+
+.navbar {
+	background-color: var(--header-color);
+}
+
+.navbar-brand {
+	--bs-navbar-brand-font-size: 1.5rem;
+}
+
+.navbar-brand:hover,
+.lang-btn:hover,
+.lang-btn:focus {
+	transition: transform 500ms;
+	transform: translateY(-2px);
+}
+
+.nav-item {
+	width: fit-content;
+}
+
+.nav-link {
+	color: #fff;
+	--bs-nav-link-hover-color: #ccc;
+}
+
+.icon-img {
+	max-width: 30px;
+}
+
+/* Hero Styles */
+
+#hero {
+	background-color: var(--primary-color);
+	position: relative;
+}
+
+.changing-text {
+	color: #a953ff;
+}
+
+.hero-icon {
+	animation: mover 1s infinite alternate;
+	-webkit-animation: mover var(--animation-duration) ease infinite;
+	max-width: 40px;
+}
+
+#about-me {
+	background-color: var(--secondary-color);
+	height: 500px;
+	position: relative;
+}
+
+.wave {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.wave svg {
+	position: relative;
+	display: block;
+	width: calc(137% + 1.3px);
+	height: 150px;
+}
+
+.wave .shape-fill {
+	fill: #001b32;
+}
+
+@keyframes up-and-down {
+	0% {
+		transform: translateY(-3px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
